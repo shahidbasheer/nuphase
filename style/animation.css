@@ -1,0 +1,44 @@
+            @keyframes forward {
+                to {
+                    bottom: calc(var(--height) * -1);
+                }
+
+                from {
+                    bottom: calc(var(--height) * var(--quantity));
+                }
+            }
+
+            /* reverse paly */
+
+            @keyframes reversePlay {
+                from {
+                    bottom: calc(var(--height) * -1);
+                }
+
+                to {
+                    bottom: calc(var(--height) * var(--quantity));
+                }
+            }
+
+
+            @keyframes logo_scroll {
+                from {
+                    left: 100%;
+                }
+
+                to {
+                    left: calc(var(--width) * -1);
+                }
+            }
+
+            /* reverse_industries */
+
+            @keyframes reverse_industries {
+                to {
+                    left: 100%;
+                }
+
+                from {
+                    left: calc(var(--width) * -1);
+                }
+            }
