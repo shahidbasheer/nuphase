@@ -477,13 +477,15 @@ body {
 }
 .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tab_content_section .custom_tab_content_box .image_box {
   width: 100%;
-  height: auto;
+  height: 500px;
   position: relative;
   cursor: pointer;
 }
 .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tab_content_section .custom_tab_content_box .image_box .project_img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tab_content_section .custom_tab_content_box .image_box .institute_logo {
   position: absolute;
