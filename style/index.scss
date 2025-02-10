@@ -3,26 +3,26 @@
 @import url(./media_query.css);
 
 $white: #ffff;
-$purple: #e9204f;
-$sky_blue: #e9204f;
+$purple: #2fa822;
+$sky_blue: #2fa822;
 $dark_blue: #000;
 $gray: #5f6568;
 $btn_text_shadow: -2px 0 5px rgba($sky_blue, 0.98), 2px 3px 5px #1baaff,
   3px 0 5px #1baaff, -3px -2px 5px #1baaff;
-$sky_blue18: #e9204f;
+$sky_blue18: #2fa822;
 $gradient_banner: linear-gradient(
   to right,
   $dark_blue,
   rgba($dark_blue, 0.897),
   transparent
 );
-$light_blue:#1baaff;
-$sky_blue009c: #e9204f;
-$purple95: #e9204f;
-$active_nav: #e9204f;
+$light_blue: #2fa822;
+$sky_blue009c: #2fa822;
+$purple95: #2fa822;
+$active_nav: #2fa822;
 $gray_E2: #eef9ff;
 $gold: #f3c03f;
-$sky_blue4e: #e9204f;
+$sky_blue4e: #2fa822;
 body {
   padding: 0;
   margin: 0;
@@ -57,12 +57,25 @@ body {
     max-width: 540px; // Small screens
   }
 }
+.custom_fluid {
+  padding: 0px 3rem;
+}
+@media (max-width: 768px) {
+  .custom_fluid {
+    padding: 0px 0rem;
+  }
+}
 
 .wrapper {
   position: relative;
 
   &.active_wrapper {
-    background: linear-gradient(282deg, #e9204f 0.6%, #20074c 53.72%, #e9204f 123.97%);
+    background: linear-gradient(
+      282deg,
+      #2fa822 0.6%,
+      #252525 53.72%,
+      #2fa822 123.97%
+    );
     .header {
       border: 0 !important;
     }
@@ -114,11 +127,7 @@ body {
                 left: 0;
                 width: 0;
                 height: 2px;
-                background: linear-gradient(
-                  to right,
-                  $sky_blue,
-                  $light_blue
-                );
+                background: linear-gradient(to right, $sky_blue, $light_blue);
                 transition: all 0.3s ease-in-out;
               }
 
@@ -181,6 +190,13 @@ body {
 
       .bi-x {
         font-size: 30px;
+      }
+    }
+    @media (max-width: 768px) {
+      .quote_btn {
+        border-radius: 0;
+        padding: 14px 18px;
+        font-size: 12px;
       }
     }
   }
@@ -298,14 +314,14 @@ body {
           transform: translateY(-50%);
           color: $white;
           z-index: 1;
-          width: 60%;
+          width: 50%;
 
           .subtitle {
             font-size: 24px;
           }
 
           .title {
-            font-size: 110px;
+            font-size: clamp(35px, 10vw, 110px);
             font-weight: bold;
           }
 
@@ -333,10 +349,15 @@ body {
             }
           }
         }
-        @media(max-width:1440px){
-            .text_box {
-                padding-top: 40px;
+
+        @media (max-width: 992px) {
+          .text_box {
+            .show_case_btn {
+              padding: 14px 18px;
+              font-size: 16px;
+              font-weight: 500;
             }
+          }
         }
       }
 
@@ -524,6 +545,10 @@ body {
                 gap: 20px;
                 min-width: 180px;
                 min-height: 180px;
+                .tab_icon {
+                  filter: brightness(0) invert(1);
+                  transition: all 0.3s ease;
+                }
 
                 .arrow_down {
                   opacity: 0;
@@ -531,6 +556,10 @@ body {
 
                 &:hover {
                   color: $active_nav;
+                  .tab_icon {
+                    filter: invert(48%) sepia(97%) saturate(406%)
+                      hue-rotate(81deg) brightness(92%) contrast(91%);
+                  }
                 }
               }
 
@@ -541,7 +570,10 @@ body {
                 .arrow_down {
                   opacity: 1;
                 }
-
+                .tab_icon {
+                  filter: invert(48%) sepia(97%) saturate(406%)
+                    hue-rotate(81deg) brightness(92%) contrast(91%);
+                }
                 &:hover {
                   color: $purple;
                 }
@@ -643,8 +675,41 @@ body {
             }
           }
         }
+        @media (max-width: 992px) {
+          .custom_tabs_nav_section {
+            display: unset;
+            .custom_nav_items {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .custom_nav_item {
+                .custom_nav_link {
+                  font-size: 16px;
+                  gap: 0px;
+                  min-width: 85px;
+                  min-height: 120px;
+                  padding: 10px 5px;
+                  .nav_icon {
+                    font-size: 1em;
+                  }
+                }
+              }
+            }
+          }
+          .custom_tab_content_section {
+            .custom_tab_content_box {
+              .image_box {
+                .institute_logo {
+                  bottom: 20px;
+                  left: 20px;
+                  width: 100px;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
       }
-
       // web design agency
 
       .industries_section {
@@ -905,6 +970,24 @@ body {
             }
           }
         }
+        @media (max-width: 992px) {
+          .sticky_box {
+            position: relative;
+          }
+          .design_cards_category {
+            .catgeory_card {
+              padding: 0;
+              &::before {
+                width: 100%;
+                height: 48%;
+              }
+              &:hover {
+                padding: 10px 0px 0px 0px;
+                width: 100%;
+              }
+            }
+          }
+        }
       }
 
       // case studies
@@ -1128,7 +1211,11 @@ body {
             content: "";
             width: 30%;
             min-height: 200px;
-            background: linear-gradient(to right, rgba($sky_blue, 0.9)20%, rgba($light_blue, 0.9));
+            background: linear-gradient(
+              to right,
+              rgba($sky_blue, 0.9) 20%,
+              rgba($light_blue, 0.9)
+            );
             top: 50%;
             left: 14%;
             transform: translate(-14%, -50%);
@@ -1225,12 +1312,50 @@ body {
                 margin-top: -5px;
                 display: inline-block;
                 transition: transform 0.3s ease, margin-left 0.3s ease;
-                filter: invert(16) sepia(72%) saturate(125%) hue-rotate(-410deg) brightness(90%) contrast(103%);
+                filter: invert(16) sepia(72%) saturate(125%) hue-rotate(-410deg)
+                  brightness(90%) contrast(103%);
               }
 
               &:hover .arrow_icon {
                 margin-left: 8px;
               }
+            }
+          }
+        }
+        @media (max-width: 992px) {
+          .custom_carousel_box_left {
+            .slide_item {
+              padding: 50px 0px !important;
+              .text_box {
+                .desc {
+                  text-transform: uppercase;
+                  font-size: 18px;
+                }
+              }
+            }
+            &::before {
+              width: 100%;
+              top: 26%;
+              left: 10%;
+              transform: translate(-10%, -26%);
+            }
+          }
+
+          .testimonial_right_section {
+            .custom_carousel_box_right {
+              .slide_item {
+                padding: 40px 10px;
+                .description_box {
+                  .text_box {
+                    line-height: 2rem;
+                  }
+                }
+              }
+            }
+
+            .reviews_card_box {
+              flex-direction: column;
+              position: unset;
             }
           }
         }
@@ -1367,6 +1492,7 @@ body {
         min-width: 100%;
         padding: 100px 0px;
         position: relative;
+        overflow: hidden;
 
         .heading_box {
           width: 54%;
@@ -1380,7 +1506,7 @@ body {
 
           .working_step {
             min-width: 45%;
-            padding-left: 10%;
+            padding-left: clamp(40px, 5vw, 100px);
             position: relative;
             display: block;
 
@@ -1439,7 +1565,8 @@ body {
                   .bullit_arrow {
                     rotate: 270deg;
                     width: 30px;
-                    filter:invert(16) sepia(72%) saturate(125%) hue-rotate(-410deg) brightness(90%) contrast(103%);
+                    filter: invert(16) sepia(72%) saturate(125%)
+                      hue-rotate(-410deg) brightness(90%) contrast(103%);
                   }
                 }
               }
@@ -1520,6 +1647,23 @@ body {
                   }
                 }
               }
+            }
+          }
+        }
+        @media (max-width: 768px) {
+          .heading_box {
+            width: 100%;
+          }
+
+          .process_steps {
+            display: inline-flex;
+            align-items: center;
+
+            .working_step {
+              min-width: 80%;
+              padding-left: clamp(40px, 5vw, 100px);
+              position: relative;
+              display: block;
             }
           }
         }
@@ -1825,7 +1969,11 @@ body {
           .hr {
             width: 100%;
             height: 2px;
-            background: linear-gradient(131.8deg, $sky_blue 60%, $dark_blue 100%);
+            background: linear-gradient(
+              131.8deg,
+              $sky_blue 60%,
+              $dark_blue 100%
+            );
             margin: 50px 0px;
           }
         }
@@ -1911,6 +2059,11 @@ body {
                 }
               }
             }
+          }
+        }
+        @media (max-width: 768px) {
+          .custom_accordion_section {
+            width: 100%;
           }
         }
       }
@@ -2012,6 +2165,15 @@ body {
             }
           }
         }
+        @media (max-width: 768px) {
+          .social_links_box {
+            gap: 10px;
+            flex-wrap: wrap;
+          }
+          .form_section {
+            float: inline-start;
+          }
+        }
       }
 
       // footer_section
@@ -2042,6 +2204,22 @@ body {
                 }
               }
             }
+          }
+        }
+      }
+      @media (max-width: 13366px) {
+        .banner_section {
+          height: 100vh;
+          .text_box {
+            padding-top: 50px;
+          }
+        }
+      }
+      @media (max-width: 768px) {
+        .banner_section {
+          .text_box {
+            padding-top: 0px;
+            width: 80%;
           }
         }
       }

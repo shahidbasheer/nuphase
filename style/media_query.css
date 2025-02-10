@@ -1,9 +1,0 @@
-@media (max-width:1366px) {
-    .wrapper_outside .banner_section {
-        height: 100vh !important;
-    }
-
-    .wrapper_outside .text_box .title {
-        font-size: 80px !important;
-    }
-}
