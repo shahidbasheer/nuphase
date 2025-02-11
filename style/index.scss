@@ -116,7 +116,7 @@ body {
             .nav_link {
               text-decoration: none;
               color: $white;
-              font-size: 48px;
+              font-size: clamp(20px, 5vw, 48px);
               font-weight: bold;
               position: relative;
 
@@ -140,6 +140,17 @@ body {
           }
         }
       }
+    }
+    @media(max-width:768px){
+      .main_wrapper {
+      .imageBox {
+       display: none !important;
+      }
+      .nav_menu_wrapper{
+        width: 45%;
+        transform: translate(8%, -50%);
+      }
+    }
     }
   }
 
@@ -708,6 +719,27 @@ body {
                 }
               }
             }
+          }
+        }
+         @media (max-width: 568px) {
+          .custom_tabs_nav_section {
+            display: unset;
+            .custom_nav_items {
+              justify-content: center;
+              .custom_nav_item {
+                .custom_nav_link {
+                  font-size: 14px;
+                  min-width: 75px;
+                  min-height: 110px;
+                   .tab_icon {
+                    width: 40px;
+                }
+                }
+              }
+            }
+          }
+          .custom_tab_content_section{
+            padding: 50px 0px;
           }
         }
       }
@@ -1661,10 +1693,16 @@ body {
             align-items: center;
 
             .working_step {
-              min-width: 80%;
-              padding-left: clamp(40px, 5vw, 100px);
+              min-width: 60%;
               position: relative;
               display: block;
+               .active_bullit,
+            .bullet {
+              display: none;
+            }
+            .progress_bar{
+              display: none;
+            }
             }
           }
         }
@@ -2025,11 +2063,7 @@ body {
       // question
       .question {
         padding: 100px 0px;
-
         .custom_accordion_section {
-          width: 70%;
-          margin: 0px auto;
-
           .custom_accordin {
             .accordion {
               --bs-accordion-border-color: none;
@@ -2062,11 +2096,7 @@ body {
             }
           }
         }
-        @media (max-width: 768px) {
-          .custom_accordion_section {
-            width: 100%;
-          }
-        }
+      
       }
 
       // conversation_section{
@@ -2094,6 +2124,7 @@ body {
         .social_links_box {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
           gap: 40px;
 
           .custom_vr {
@@ -2166,6 +2197,7 @@ body {
             }
           }
         }
+
         @media (max-width: 768px) {
           .social_links_box {
             gap: 10px;
@@ -2212,17 +2244,36 @@ body {
         .banner_section {
           .text_box {
             padding-top: 50px;
-            width: 60%;
           }
+        }
+      }
+      @media(max-width:992px){
+        .banner_section{
+          .vertical_slide_wrapper {
+          gap: 20px;
+          transform: translate(30%, -50%);
+          .first_slider{
+            display: none;
+          }
+          .middle_slider,
+          .slider{
+            rotate: 12deg;
+          }
+        }
         }
       }
       @media (max-width: 768px) {
         .banner_section {
           .text_box {
             padding-top: 0px;
-            width: 80%;
+            width: 90%;
+            overflow: hidden;
           }
         }
+
+      .locations_section {
+       display: none;
+      }
       }
     }
   }
@@ -2257,14 +2308,7 @@ body {
 }
 
 .custom_tab_btn {
-  border: 3px solid transparent;
-  border-image-source: linear-gradient(
-    7deg,
-    rgba($purple, 0.6) 40%,
-    rgba($dark_blue, 0.8) 80%
-  );
-  border-image-slice: 1;
-  background: transparent;
+  border: 1px solid $light_blue;
   color: $sky_blue;
   font-size: 24px;
   font-weight: 500;
@@ -2288,11 +2332,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba($sky_blue, 0.9) 20%,
-      rgba($dark_blue, 0.9) 80%
-    );
+    background: $light_blue;
     z-index: -1;
     transition: width 0.6s ease-in-out;
   }

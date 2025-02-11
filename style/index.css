@@ -92,7 +92,7 @@ body {
 .wrapper.active_wrapper .main_wrapper .nav_menu_wrapper .nav_lists_box .nav_list .nav_link {
   text-decoration: none;
   color: white;
-  font-size: 48px;
+  font-size: clamp(20px, 5vw, 48px);
   font-weight: bold;
   position: relative;
 }
@@ -108,6 +108,15 @@ body {
 }
 .wrapper.active_wrapper .main_wrapper .nav_menu_wrapper .nav_lists_box .nav_list .nav_link:hover::before {
   width: 100%;
+}
+@media (max-width: 768px) {
+  .wrapper.active_wrapper .main_wrapper .imageBox {
+    display: none !important;
+  }
+  .wrapper.active_wrapper .main_wrapper .nav_menu_wrapper {
+    width: 45%;
+    transform: translate(8%, -50%);
+  }
 }
 .wrapper .header {
   position: absolute;
@@ -567,6 +576,25 @@ body {
     left: 20px;
     width: 100px;
     height: auto;
+  }
+}
+@media (max-width: 568px) {
+  .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tabs_nav_section {
+    display: unset;
+  }
+  .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tabs_nav_section .custom_nav_items {
+    justify-content: center;
+  }
+  .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tabs_nav_section .custom_nav_items .custom_nav_item .custom_nav_link {
+    font-size: 14px;
+    min-width: 75px;
+    min-height: 110px;
+  }
+  .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tabs_nav_section .custom_nav_items .custom_nav_item .custom_nav_link .tab_icon {
+    width: 40px;
+  }
+  .wrapper .main_wrapper .wrapper_outside .our_worksection .custom_tab_content_section {
+    padding: 50px 0px;
   }
 }
 .wrapper .main_wrapper .wrapper_outside .industries_section {
@@ -1275,10 +1303,16 @@ body {
     align-items: center;
   }
   .wrapper .main_wrapper .wrapper_outside .website_design_process_section .process_steps .working_step {
-    min-width: 80%;
-    padding-left: clamp(40px, 5vw, 100px);
+    min-width: 60%;
     position: relative;
     display: block;
+  }
+  .wrapper .main_wrapper .wrapper_outside .website_design_process_section .process_steps .working_step .active_bullit,
+  .wrapper .main_wrapper .wrapper_outside .website_design_process_section .process_steps .working_step .bullet {
+    display: none;
+  }
+  .wrapper .main_wrapper .wrapper_outside .website_design_process_section .process_steps .working_step .progress_bar {
+    display: none;
   }
 }
 .wrapper .main_wrapper .wrapper_outside .calculate_website_box {
@@ -1548,10 +1582,6 @@ body {
 .wrapper .main_wrapper .wrapper_outside .question {
   padding: 100px 0px;
 }
-.wrapper .main_wrapper .wrapper_outside .question .custom_accordion_section {
-  width: 70%;
-  margin: 0px auto;
-}
 .wrapper .main_wrapper .wrapper_outside .question .custom_accordion_section .custom_accordin .accordion {
   --bs-accordion-border-color: none;
   --bs-accordion-btn-focus-box-shadow: none;
@@ -1575,11 +1605,6 @@ body {
   font-weight: 400;
   color: #000;
 }
-@media (max-width: 768px) {
-  .wrapper .main_wrapper .wrapper_outside .question .custom_accordion_section {
-    width: 100%;
-  }
-}
 .wrapper .main_wrapper .wrapper_outside .conversation_section {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 50%, rgba(47, 168, 34, 0.9) 100%);
   padding: 100px 0px;
@@ -1597,6 +1622,7 @@ body {
 .wrapper .main_wrapper .wrapper_outside .conversation_section .social_links_box {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .wrapper .main_wrapper .wrapper_outside .conversation_section .social_links_box .custom_vr {
@@ -1700,13 +1726,29 @@ body {
 @media (max-width: 1366px) {
   .wrapper .main_wrapper .wrapper_outside .banner_section .text_box {
     padding-top: 50px;
-    width: 60%;
+  }
+}
+@media (max-width: 992px) {
+  .wrapper .main_wrapper .wrapper_outside .banner_section .vertical_slide_wrapper {
+    gap: 20px;
+    transform: translate(30%, -50%);
+  }
+  .wrapper .main_wrapper .wrapper_outside .banner_section .vertical_slide_wrapper .first_slider {
+    display: none;
+  }
+  .wrapper .main_wrapper .wrapper_outside .banner_section .vertical_slide_wrapper .middle_slider,
+  .wrapper .main_wrapper .wrapper_outside .banner_section .vertical_slide_wrapper .slider {
+    rotate: 12deg;
   }
 }
 @media (max-width: 768px) {
   .wrapper .main_wrapper .wrapper_outside .banner_section .text_box {
     padding-top: 0px;
-    width: 80%;
+    width: 90%;
+    overflow: hidden;
+  }
+  .wrapper .main_wrapper .wrapper_outside .locations_section {
+    display: none;
   }
 }
 
@@ -1739,10 +1781,7 @@ body {
 }
 
 .custom_tab_btn {
-  border: 3px solid transparent;
-  border-image-source: linear-gradient(7deg, rgba(47, 168, 34, 0.6) 40%, rgba(0, 0, 0, 0.8) 80%);
-  border-image-slice: 1;
-  background: transparent;
+  border: 1px solid #2fa822;
   color: #2fa822;
   font-size: 24px;
   font-weight: 500;
@@ -1765,7 +1804,7 @@ body {
   left: 0;
   width: 0;
   height: 100%;
-  background: linear-gradient(to right, rgba(47, 168, 34, 0.9) 20%, rgba(0, 0, 0, 0.9) 80%);
+  background: #2fa822;
   z-index: -1;
   transition: width 0.6s ease-in-out;
 }
