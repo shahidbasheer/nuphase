@@ -9,7 +9,7 @@ $dark_blue: #000;
 $gray: #5f6568;
 $btn_text_shadow: -2px 0 5px rgba($sky_blue, 0.98), 2px 3px 5px #1baaff,
   3px 0 5px #1baaff, -3px -2px 5px #1baaff;
-$sky_blue18: #2fa822;
+$sky_blue18: #2fa822;     
 $gradient_banner: linear-gradient(
   to right,
   $dark_blue,
@@ -1313,8 +1313,8 @@ body {
                 margin-top: -5px;
                 display: inline-block;
                 transition: transform 0.3s ease, margin-left 0.3s ease;
-                filter: invert(16) sepia(72%) saturate(125%) hue-rotate(-410deg)
-                  brightness(90%) contrast(103%);
+                filter: invert(47%) sepia(86%) saturate(366%) hue-rotate(66deg) brightness(91%) contrast(98%);
+
               }
 
               &:hover .arrow_icon {
@@ -1563,12 +1563,12 @@ body {
                   gap: 20px;
                   padding: 10px 0px;
 
-                  .bullit_arrow {
-                    rotate: 270deg;
-                    width: 30px;
-                    filter: invert(16) sepia(72%) saturate(125%)
-                      hue-rotate(-410deg) brightness(90%) contrast(103%);
-                  }
+                .bullit_arrow {
+    rotate: 270deg;
+    width: 30px;
+    filter: invert(47%) sepia(86%) saturate(366%) hue-rotate(66deg) brightness(91%) contrast(98%);
+}
+
                 }
               }
 
@@ -1897,7 +1897,7 @@ body {
                 justify-content: center;
 
                 .arrow_box {
-                  background-color: pink;
+                  background:$gray_E2 ;
                   height: 46px;
                   width: 46px;
                   display: inline-block;
@@ -1906,7 +1906,7 @@ body {
                   justify-content: center;
 
                   .arrow_img {
-                    filter: brightness(80);
+                    filter: invert(47%) sepia(86%) saturate(366%) hue-rotate(66deg) brightness(91%) contrast(98%);
                   }
                 }
               }
@@ -2213,6 +2213,7 @@ body {
           height: 100vh;
           .text_box {
             padding-top: 50px;
+            width: 60%;
           }
         }
       }
