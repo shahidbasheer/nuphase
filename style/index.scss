@@ -221,7 +221,7 @@ body {
       }
 
       .banner_section {
-        height: 90vh;
+        height: 100vh;
         overflow: hidden;
         position: relative;
         background-color: $purple;
@@ -2208,9 +2208,8 @@ body {
           }
         }
       }
-      @media (max-width: 13366px) {
+      @media (max-width: 1366px) {
         .banner_section {
-          height: 100vh;
           .text_box {
             padding-top: 50px;
             width: 60%;

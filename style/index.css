@@ -176,7 +176,7 @@ body {
   height: 100vh;
 }
 .wrapper .main_wrapper .wrapper_outside .banner_section {
-  height: 90vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   background-color: #2fa822;
@@ -1697,10 +1697,7 @@ body {
 .wrapper .main_wrapper .wrapper_outside .footer_section .footer_category_box .category_list_box .category_list .category_link:hover {
   text-decoration: underline;
 }
-@media (max-width: 13366px) {
-  .wrapper .main_wrapper .wrapper_outside .banner_section {
-    height: 100vh;
-  }
+@media (max-width: 1366px) {
   .wrapper .main_wrapper .wrapper_outside .banner_section .text_box {
     padding-top: 50px;
     width: 60%;
