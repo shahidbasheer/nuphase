@@ -265,7 +265,6 @@ body {
   transform: translateY(-50%);
   color: white;
   z-index: 1;
-  width: 50%;
 }
 .wrapper .main_wrapper .wrapper_outside .banner_section .text_box .subtitle {
   font-size: 24px;
@@ -1744,7 +1743,6 @@ body {
 @media (max-width: 768px) {
   .wrapper .main_wrapper .wrapper_outside .banner_section .text_box {
     padding-top: 0px;
-    width: 90%;
     overflow: hidden;
   }
   .wrapper .main_wrapper .wrapper_outside .locations_section {
