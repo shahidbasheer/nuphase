@@ -134,7 +134,7 @@ gsap.to(processingCards, {
 
 
 gsap.to(".progress_bar", {
-    width: "200vw",
+    width: "180vw",
     scrollTrigger: {
         pin: true,
         trigger: ".process_steps",
