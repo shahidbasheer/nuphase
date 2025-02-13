@@ -197,7 +197,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  background: linear-gradient(to right, #000, rgba(0, 0, 0, 0.797), transparent);
 }
 .wrapper .main_wrapper .wrapper_outside .banner_section .vertical_slide_wrapper {
   display: flex;
@@ -1377,7 +1377,7 @@ body {
   color: #2fa822;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section {
-  background: #000;
+  background: white;
   padding: 100px 0px;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main {
@@ -1388,17 +1388,13 @@ body {
   border: 1px solid #2fa822;
   padding: 14px 30% 14px 20px;
   border-radius: 0;
-  color: white;
+  color: #000;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main .custom_field::-moz-placeholder {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
+  color: #000;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main .custom_field::placeholder {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
+  color: #000;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main .custom_field:focus {
   box-shadow: none;
@@ -1421,7 +1417,7 @@ body {
   justify-content: center;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main .download_btn .arrow_box {
-  background: #eef9ff;
+  background: #000;
   height: 46px;
   width: 46px;
   display: inline-block;
@@ -1430,7 +1426,7 @@ body {
   justify-content: center;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .text_box .custom_field_box .custom_main .download_btn .arrow_box .arrow_img {
-  filter: invert(47%) sepia(86%) saturate(366%) hue-rotate(66deg) brightness(91%) contrast(98%);
+  filter: invert(0) brightness(100);
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .image_box {
   display: flex;
