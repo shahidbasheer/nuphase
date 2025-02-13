@@ -1432,6 +1432,8 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  height: 500px;
+  width: 100%;
 }
 .wrapper .main_wrapper .wrapper_outside .digital_trends_section .image_box::before {
   position: absolute;

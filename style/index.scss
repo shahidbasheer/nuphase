@@ -1942,6 +1942,8 @@ body {
           display: flex;
           justify-content: center;
           position: relative;
+          height: 500px;
+          width: 100%;
 
           &::before {
             position: absolute;
